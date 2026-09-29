@@ -1,5 +1,9 @@
 import autore
 import brano
+import User_data
+
+Utente1 = User_data.user_data("user1", "password1", "user1@example.com")
+print(Utente1.to_string())
 
 autore1 = autore.autore("John", "Lennon")
 autore2 = autore.autore("Freddie", "Mercury")
