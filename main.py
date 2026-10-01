@@ -1,6 +1,7 @@
 import autore
 import brano
 import User_data
+import playlist
 
 Utente1 = User_data.user_data("user1", "password1", "user1@example.com")
 print(Utente1.to_string())
@@ -14,3 +15,10 @@ canzone2 = brano.brano("Bohemian Rhapsody", autore2, 5.55)
 print(canzone1.to_string())
 print(canzone2.to_string())
 
+playlist1 = playlist.playlist("My Playlist")
+playlist1.aggiungi_brano(canzone1)
+playlist1.aggiungi_brano(canzone2)
+
+print(playlist1.to_string())
+playlist1.rimuovi_brano(canzone1)
+print(playlist1.to_string())
